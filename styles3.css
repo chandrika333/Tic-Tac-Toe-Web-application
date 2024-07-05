@@ -1,0 +1,55 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    position: relative;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cell:hover {
+    background-color: #555;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .cell.clicked {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .winning-line {
+    position: absolute;
+    height: 4px;
+    background-color: red;
+    transition: width 0.5s;
+  }
+  
